@@ -1,0 +1,18 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    欢迎进入第{{ player.round_number }}轮游戏
+{% endblock %}
+{% block content %}
+
+{{ if average_score_R1 == None }}
+<p>暂时无人购买您的商品，未生成均分。</p>
+{{ else }}
+<p>您的标准化均分为：{{average_score_R1}}</p>
+{{ endif }}
+    本轮您分配到的商品质量为：{{ quality }}，该商品对买家的效用为：{{ value_to_buyer }}。
+    {% formfields %}
+    {% next_button %}
+历史交易记录：
+{{convertTohtml}}
+{% endblock %}

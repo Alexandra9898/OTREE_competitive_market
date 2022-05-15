@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    买家打分阶段：
+{% endblock %}
+{% block content %}
+<style>
+.table tr:first-child{background:#0066CC; color:#fff;font-weight:bold;} /*第一行标题蓝色背景*/
+.table{border-top:1pt solid #C1DAD7;border-left:1pt solid #C1DAD7;margin: 0 auto;}
+.table td{ padding:5px 10px; text-align:center;border-right:1pt solid #C1DAD7;border-bottom:1pt solid #C1DAD7;}
+.table tr:nth-of-type(even){ background:#F5FAFA;} /* odd 标识奇数行，even标识偶数行 */
+</style>
+    <table cellpadding=7" class="table">
+<tr>
+<td>商品成本:</td>
+<td>购买价格:</td>
+<td>实际效用:</td>
+<td>您的收益:</td>
+<td>卖家收益:</td>
+</tr>
+<tr>
+<td>{{ quality }}</td>
+<td>{{ price }}</td>
+<td>{{ value_to_buyer }}</td>
+<td>{{buyer_payoff}}</td>
+<td>{{seller_payoff}}</td>
+</tr>
+</table>
+    {% formfields %}
+    {% next_button %}
+历史交易记录：
+{{convertTohtml}}
+{% endblock %}

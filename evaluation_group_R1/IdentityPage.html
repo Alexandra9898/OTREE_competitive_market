@@ -1,0 +1,15 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    亲爱的玩家，欢迎您进入游戏。您的角色是：
+{% endblock %}
+
+{% block content %}
+
+    {{ role }}
+
+    {% next_button %}
+{% endblock %}
+
+

@@ -1,0 +1,15 @@
+{{ block title }}
+    第{{player.round_number}}轮游戏结果：
+{{ endblock }}
+{{ block content }}
+    <p>您的商品{{seller_result}}，</p>
+    {{if seller_score != ""}}
+    <p>他们对您的评分为:{{seller_score}}分。</p>
+    {{endif}}
+    <p>在本轮您的收益为：{{player.payoff}}。</p>
+    {{ next_button }}
+
+{{ endblock }}
+
+
+

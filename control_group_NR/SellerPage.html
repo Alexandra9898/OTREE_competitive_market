@@ -1,0 +1,12 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    欢迎进入第{{ player.round_number }}轮游戏
+{% endblock %}
+{% block content %}
+    本轮您分配到的商品质量为：{{ quality }}，该商品对买家的效用为：{{ value_to_buyer }}。
+    {% formfields %}
+    {% next_button %}
+历史交易记录:
+{{convertTohtml}}
+{% endblock %}

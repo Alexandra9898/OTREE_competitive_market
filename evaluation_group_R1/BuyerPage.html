@@ -1,0 +1,16 @@
+{% extends "global/Page.html" %}
+
+{% block title %}
+    欢迎进入第{{ player.round_number }}轮游戏
+{% endblock %}
+{% block content %}
+    <p>卖家A出价:{{priceA}},该卖家平均分:{{scoreR_A}}</p>
+    <p>卖家B出价:{{priceB}},该卖家平均分:{{scoreR_B}}</p>
+    <p>卖家C出价:{{priceC}},该卖家平均分:{{scoreR_C}}</p>
+    {% formfields %}
+    {% next_button %}
+
+历史交易记录:
+{{convertTohtml}}
+
+{% endblock %}
